@@ -1,0 +1,51 @@
+
+*{
+  margin: 8px;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.graph .labels.x-labels {
+  text-anchor: middle;
+}
+
+.graph .labels.y-labels {
+  text-anchor: middle;
+}
+
+
+.graph {
+  height: 600px;
+  width: 1000px;
+}
+
+.graph .grid {
+  stroke: rgb(110, 110, 110);
+  stroke-dasharray: 0;
+  stroke-width: 1;
+}
+
+.labels {
+  font-size: 13px;
+
+}
+
+.label-title {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 11px;
+  fill: black;
+
+}
+
+.data {
+  fill: red;
+  stroke-width: 1;
+}
+
+.line{
+  stroke: rgb(110, 110, 110);
+  stroke-dasharray: 0;
+  stroke-width: 1;
+}
