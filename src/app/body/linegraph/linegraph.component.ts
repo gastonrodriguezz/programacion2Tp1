@@ -11,7 +11,6 @@ import { ArrayType } from '@angular/compiler';
 export class LinegraphComponent implements OnInit {
    // tslint:disable-next-line: new-parens
    sucursales = new ListadosucursalesComponent;
-   papa;
   constructor() {
    }
   ngOnInit(): void {

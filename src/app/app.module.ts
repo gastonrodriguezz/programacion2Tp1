@@ -9,7 +9,8 @@ import { FooterComponent } from './footer/footer.component';
 import { ListadosucursalesComponent } from './body/listadosucursales/listadosucursales.component';
 import { LinegraphComponent } from './body/linegraph/linegraph.component';
 import { HomeComponent } from './home/home.component';
-// import { ArbolNavidadComponent } from './body/arbol-navidad/arbol-navidad.component';
+import { ChartsModule } from 'ng2-charts';
+import { MyLineChartComponent } from './body/my-line-chart/my-line-chart.component';
 
 
 @NgModule({
@@ -21,11 +22,13 @@ import { HomeComponent } from './home/home.component';
     ListadosucursalesComponent,
     LinegraphComponent,
     HomeComponent,
+    MyLineChartComponent,
     // ArbolNavidadComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
