@@ -5,10 +5,10 @@ import { LinegraphComponent } from '../body/linegraph/linegraph.component';
 export class Sucursal {
     /* Modelo TypeScript */
     constructor(
-        private _nombre: string,
-        private _telefono: string,
-        private _ciudad: string,
-        private _ventas: Array<any>
+        public _nombre: string,
+        public _telefono: string,
+        public _ciudad: string,
+        public _ventaspormes: Array<any>
     ) { }
 
     get nombre(): string { // get por defecto
@@ -33,10 +33,17 @@ export class Sucursal {
     set ciudad(ciudad: string) { // set por defecto
         this._ciudad = ciudad;
     }
-    set ventas(valor: any[]){
-      this._ventas = valor;
+    setVentasMes(ventas: number, mes: number) {
+        if(mes > 0 && ventas >= 0) {
+            this._ventaspormes[mes] = ventas;
+        }
     }
+
+    getVentasMes(mes) {
+        return this._ventaspormes[mes];
+    }
+
     get ventas() {
-      return this._ventas;
-  }
+        return this._ventaspormes;
+    }
 }

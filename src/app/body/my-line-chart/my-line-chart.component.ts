@@ -35,6 +35,7 @@ export class MyLineChartComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
   }
 
 }

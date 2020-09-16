@@ -1,19 +1,21 @@
-<table id="customers">
+<table>
     <thead>
         <tr>
             <th>Sucursal</th>
-            <th>Teléfono</th>
-            <th>Ciudad</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let sucursal of this.sucursalesServicio.listadoSucursales; let i = index">
             <td>{{ sucursal.nombre }}</td>
-            <td>{{ sucursal.telefono }}</td>
-            <td>{{ sucursal.ciudad }}</td>
+            <td><button (click)='this.editarSucursal(i)'>Editar</button></td>
+             <td><button (click)='this.sucursalesServicio.eliminar(i)'>Eliminar</button></td>
         </tr>
     </tbody>
 </table>
+<h1>Agregar nueva sucursal</h1>
+
 <form #formSucursal="ngForm" (ngSubmit)="onSubmit(); formSucursal.reset()">
     <label>Nombre:</label>
     <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="sucursalnueva._nombre" required>
@@ -21,9 +23,9 @@
         El nombre es incorrecto o está vacío.
     </span>
     <br/>
-    <label>Ciudad:</label>
-    <input type="text" name="ciudad" #lugar="ngModel" [(ngModel)]="sucursalnueva._ciudad" required>
-    <span class="red" *ngIf="lugar.touched && !lugar.valid">
+    <label>Lugar:</label>
+    <input type="text" name="ciudad" #ciudad="ngModel" [(ngModel)]="sucursalnueva._ciudad" required>
+    <span class="red" *ngIf="ciudad.touched && !ciudad.valid">
         El lugar es incorrecto o está vacío.
     </span>
     <br/>
@@ -35,5 +37,13 @@
     </span>
     <br/>
 
+    <div *ngFor="let mes of this.sucursalesServicio.Meses; let i = index" >
+    <label >Ventas {{mes.nombre}}:</label>
+    <input type="ven" name="ventas" #ventas="ngModel" [(ngModel)]="sucursalnueva._ventaspormes[i]" required pattern="[0-9()-]+">
+    <span class="red" *ngIf="ventas.touched && !ventas.valid">
+        El valor es incorrecto o está vacío.
+    </span></div>
+    <br/>
     <input type="submit" value="Crear" [disabled]="!formSucursal.form.valid">
 </form>
+
