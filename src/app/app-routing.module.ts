@@ -4,11 +4,13 @@ import { ListadosucursalesComponent } from './body/listadosucursales/listadosucu
 import { LinegraphComponent } from './body/linegraph/linegraph.component';
 import { HomeComponent } from './home/home.component';
 import { MyLineChartComponent } from './body/my-line-chart/my-line-chart.component';
+import { SucursalesComponent } from './abm/sucursales/sucursales.component';
 
 const routes: Routes = [
   { path : '', pathMatch: 'full', redirectTo: 'lista-sucursales'},
   { path: 'lista-sucursales', component: ListadosucursalesComponent},
-  { path: 'grafico-ventas', component: MyLineChartComponent}
+  { path: 'grafico-ventas', component: MyLineChartComponent},
+  { path: 'abm-sucursales', component: SucursalesComponent}
 ];
 
 @NgModule({

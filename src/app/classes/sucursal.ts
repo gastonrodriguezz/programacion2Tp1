@@ -6,7 +6,7 @@ export class Sucursal {
     /* Modelo TypeScript */
     constructor(
         private _nombre: string,
-        private _direccion: string,
+        private _telefono: string,
         private _ciudad: string,
         private _ventas: Array<any>
     ) { }
@@ -19,12 +19,12 @@ export class Sucursal {
         this._nombre = name;
     }
 
-    get direccion(): string { // get por defecto
-        return this._direccion;
+    get telefono(): string { // get por defecto
+        return this._telefono;
     }
 
-    set direccion(direccion: string) { // set por defecto
-        this._direccion = direccion;
+    set telefono(telefono: string) { // set por defecto
+        this._telefono = telefono;
     }
     get ciudad(): string { // get por defecto
         return this._ciudad;

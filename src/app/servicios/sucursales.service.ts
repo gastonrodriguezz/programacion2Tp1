@@ -10,15 +10,13 @@ export class SucursalesService {
   public Sucursal3: Sucursal;
   public Sucursal4: Sucursal;
   constructor() {
-    this.Sucursal1 = new Sucursal('Casa Matriz', 'España 4072', 'Santa Fe', this.add12RandomNumber(new Array()));
-    this.Sucursal2 = new Sucursal('Sucursal Norte', 'Yapeyu 9364', 'Reconquista', this.add12RandomNumber(new Array()));
-    this.Sucursal3 = new Sucursal('Sucursal Sur', 'Ansina 8374', 'Rosario', this.add12RandomNumber(new Array()));
-    this.Sucursal4 = new Sucursal('Sucursal Oeste', 'Ituzaingó 9171', 'Rafaela', this.add12RandomNumber(new Array()));
+    this.Sucursal1 = new Sucursal('Casa Matriz', "154407862", 'Santa Fe', this.add12RandomNumber(new Array()));
+    this.Sucursal2 = new Sucursal('Sucursal Norte', "155329364", 'Reconquista', this.add12RandomNumber(new Array()));
+    this.Sucursal3 = new Sucursal('Sucursal Sur', "156378374", 'Rosario', this.add12RandomNumber(new Array()));
+    this.Sucursal4 = new Sucursal('Sucursal Oeste', "155399171", 'Rafaela', this.add12RandomNumber(new Array()));
     this.listadoSucursales = new Array(this.Sucursal1, this.Sucursal2, this.Sucursal3, this.Sucursal4);
   }
   ngOnInit(): void {
-    
-
   }
     // retorna un numero aleatorio entre 0-200
     randomNumber() {
@@ -30,5 +28,8 @@ export class SucursalesService {
         a.push(this.randomNumber());
       }
       return a;
+    }
+    addSucursal(sucursal:Sucursal) {
+      this.listadoSucursales.push(sucursal);
     }
 }

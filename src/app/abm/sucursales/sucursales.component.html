@@ -1,1 +1,39 @@
-<p>sucursales works!</p>
+<table id="customers">
+    <thead>
+        <tr>
+            <th>Sucursal</th>
+            <th>Teléfono</th>
+            <th>Ciudad</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let sucursal of this.sucursalesServicio.listadoSucursales; let i = index">
+            <td>{{ sucursal.nombre }}</td>
+            <td>{{ sucursal.telefono }}</td>
+            <td>{{ sucursal.ciudad }}</td>
+        </tr>
+    </tbody>
+</table>
+<form #formSucursal="ngForm" (ngSubmit)="onSubmit(); formSucursal.reset()">
+    <label>Nombre:</label>
+    <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="sucursalnueva._nombre" required>
+    <span class="red" *ngIf="nombre.touched && !nombre.valid">
+        El nombre es incorrecto o está vacío.
+    </span>
+    <br/>
+    <label>Ciudad:</label>
+    <input type="text" name="ciudad" #lugar="ngModel" [(ngModel)]="sucursalnueva._ciudad" required>
+    <span class="red" *ngIf="lugar.touched && !lugar.valid">
+        El lugar es incorrecto o está vacío.
+    </span>
+    <br/>
+
+    <label>Teléfono:</label>
+    <input type="tel" name="tel" #tel="ngModel" [(ngModel)]="sucursalnueva._telefono" required pattern="[0-9()-]+">
+    <span class="red" *ngIf="tel.touched && !tel.valid">
+        El teléfono es incorrecto o está vacío.
+    </span>
+    <br/>
+
+    <input type="submit" value="Crear" [disabled]="!formSucursal.form.valid">
+</form>
