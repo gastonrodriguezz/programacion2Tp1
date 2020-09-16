@@ -7,7 +7,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let sucursal of this.listadoSucursales; let i = index">
+        <tr *ngFor="let sucursal of this.sucursalesServicio.listadoSucursales; let i = index">
             <td>{{ sucursal.nombre }}</td>
             <td>{{ sucursal.direccion }}</td>
             <td>{{ sucursal.ciudad }}</td>

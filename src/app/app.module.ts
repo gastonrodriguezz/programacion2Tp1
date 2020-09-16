@@ -11,6 +11,7 @@ import { LinegraphComponent } from './body/linegraph/linegraph.component';
 import { HomeComponent } from './home/home.component';
 import { ChartsModule } from 'ng2-charts';
 import { MyLineChartComponent } from './body/my-line-chart/my-line-chart.component';
+import { SucursalesComponent } from './abm/sucursales/sucursales.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { MyLineChartComponent } from './body/my-line-chart/my-line-chart.compone
     LinegraphComponent,
     HomeComponent,
     MyLineChartComponent,
+    SucursalesComponent,
     // ArbolNavidadComponent,
   ],
   imports: [

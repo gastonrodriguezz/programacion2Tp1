@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ChartDataSets, ChartOptions, ChartType } from 'chart.js';
 import { Color, Label } from 'ng2-charts';
+import { SucursalesService } from 'src/app/servicios/sucursales.service';
 import { ListadosucursalesComponent } from '../listadosucursales/listadosucursales.component';
 
 @Component({
@@ -10,7 +11,7 @@ import { ListadosucursalesComponent } from '../listadosucursales/listadosucursal
 })
 export class MyLineChartComponent implements OnInit {
   // tslint:disable-next-line: new-parens
-  sucursales = new ListadosucursalesComponent;
+  sucursales = new SucursalesService;
   public lineChartData: ChartDataSets[] = [
     { data: this.sucursales.Sucursal1.ventas, label: 'Sucursal 1' },
     { data: this.sucursales.Sucursal2.ventas, label: 'Sucursal 2' },
