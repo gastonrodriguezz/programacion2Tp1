@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { ChartsModule } from 'ng2-charts';
 import { MyLineChartComponent } from './body/my-line-chart/my-line-chart.component';
 import { SucursalesComponent } from './abm/sucursales/sucursales.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -26,6 +27,7 @@ import { SucursalesComponent } from './abm/sucursales/sucursales.component';
     HomeComponent,
     MyLineChartComponent,
     SucursalesComponent,
+    
     // ArbolNavidadComponent,
   ],
   imports: [
@@ -33,7 +35,8 @@ import { SucursalesComponent } from './abm/sucursales/sucursales.component';
     AppRoutingModule,
     ChartsModule,
     BrowserModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
