@@ -1,7 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ListadosucursalesComponent } from '../listadosucursales/listadosucursales.component';
-import { Sucursal } from '../../classes/sucursal';
-import { ArrayType } from '@angular/compiler';
 import { SucursalesService } from '../../servicios/sucursales.service';
 
 @Component({

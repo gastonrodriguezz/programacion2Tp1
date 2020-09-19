@@ -1,6 +1,5 @@
 import { Mes } from './mes';
 import { ViewChild } from '@angular/core';
-import { LinegraphComponent } from '../body/linegraph/linegraph.component';
 
 export class Sucursal {
     /* Modelo TypeScript */

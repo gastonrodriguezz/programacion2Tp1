@@ -1,3 +1,7 @@
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
 <table id="customers">
     <thead>
         <tr>
@@ -13,4 +17,20 @@
             <td>{{ sucursal.ciudad }}</td>
         </tr>
     </tbody>
+</table>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="nombre">
+        <th mat-header-cell *matHeaderCellDef> Sucursal </th>
+        <td mat-cell *matCellDef="let sucursal"> {{ sucursal.nombre }} </td>
+      </ng-container>
+      <ng-container matColumnDef="telefono">
+        <th mat-header-cell *matHeaderCellDef> Teléfono </th>
+        <td mat-cell *matCellDef="let sucursal"> {{ sucursal.telefono }} </td>
+      </ng-container>
+      <ng-container matColumnDef="ciudad">
+        <th mat-header-cell *matHeaderCellDef> Ciudad </th>
+        <td mat-cell *matCellDef="let sucursal"> {{ sucursal.ciudad }} </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>    
 </table>

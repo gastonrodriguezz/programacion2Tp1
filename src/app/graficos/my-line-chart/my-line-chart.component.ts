@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ChartDataSets, ChartOptions, ChartType } from 'chart.js';
 import { Color, Label } from 'ng2-charts';
 import { SucursalesService } from 'src/app/servicios/sucursales.service';
-import { ListadosucursalesComponent } from '../listadosucursales/listadosucursales.component';
+
+
 
 @Component({
   selector: 'app-my-line-chart',

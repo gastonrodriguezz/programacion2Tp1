@@ -7,13 +7,16 @@ import { HeaderComponent } from './header/header.component';
 import { BodyComponent } from './body/body.component';
 import { FooterComponent } from './footer/footer.component';
 import { ListadosucursalesComponent } from './body/listadosucursales/listadosucursales.component';
-import { LinegraphComponent } from './body/linegraph/linegraph.component';
 import { HomeComponent } from './home/home.component';
 import { ChartsModule } from 'ng2-charts';
-import { MyLineChartComponent } from './body/my-line-chart/my-line-chart.component';
 import { SucursalesComponent } from './abm/sucursales/sucursales.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { MyLineChartComponent } from './graficos/my-line-chart/my-line-chart.component';
+import { LinegraphComponent } from './graficos/linegraph/linegraph.component';
+import {MatTableModule} from '@angular/material/table';
+import { TablaComponent } from './tabla/tabla.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 
 @NgModule({
@@ -27,6 +30,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomeComponent,
     MyLineChartComponent,
     SucursalesComponent,
+    TablaComponent,
+   // MatTableModule,
     
     // ArbolNavidadComponent,
   ],
@@ -36,7 +41,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ChartsModule,
     BrowserModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]

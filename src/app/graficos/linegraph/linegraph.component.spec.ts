@@ -1,6 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { LinegraphComponent } from './linegraph.component';
-import { ListadosucursalesComponent } from '../listadosucursales/listadosucursales.component';
 
 describe('LinegraphComponent', () => {
   let component: LinegraphComponent;
