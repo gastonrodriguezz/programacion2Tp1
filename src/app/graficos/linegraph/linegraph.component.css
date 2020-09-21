@@ -1,33 +1,31 @@
 
-*{
-  margin: 8px;
-}
-body {
-  font-family: 'Open Sans', sans-serif;
-}
 
 .graph .labels.x-labels {
   text-anchor: middle;
+ 
 }
 
 .graph .labels.y-labels {
   text-anchor: middle;
+  
 }
 
 
 .graph {
   height: 600px;
-  width: 1000px;
+  width: 950px;
+
 }
 
 .graph .grid {
-  stroke: rgb(110, 110, 110);
+  stroke: #fafafa;
   stroke-dasharray: 0;
   stroke-width: 1;
 }
 
 .labels {
   font-size: 13px;
+  fill: #fafafa;
 
 }
 
@@ -35,17 +33,26 @@ body {
   font-weight: bold;
   text-transform: uppercase;
   font-size: 11px;
-  fill: black;
+  fill: #fafafa;
 
 }
 
 .data {
-  fill: red;
   stroke-width: 1;
 }
 
 .line{
-  stroke: rgb(110, 110, 110);
+  stroke: #fafafa;
   stroke-dasharray: 0;
   stroke-width: 1;
+}.caja{
+  display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    border-spacing: 2px;
+    background-color: #424242;
+    width: 60%;
+    margin:40px auto;
+    box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
+    box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
 }

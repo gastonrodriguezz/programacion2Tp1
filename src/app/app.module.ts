@@ -3,10 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BodyComponent } from './body/body.component';
 import { FooterComponent } from './footer/footer.component';
 import { ListadosucursalesComponent } from './body/listadosucursales/listadosucursales.component';
-import { HomeComponent } from './home/home.component';
 import { ChartsModule } from 'ng2-charts';
 import { SucursalesComponent } from './abm/sucursales/sucursales.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -19,14 +17,11 @@ import { MatSortModule } from '@angular/material/sort';
 @NgModule({
   declarations: [
     AppComponent,
-    BodyComponent,
     FooterComponent,
     ListadosucursalesComponent,
     LinegraphComponent,
-    HomeComponent,
     MyLineChartComponent,
-    SucursalesComponent,
-    // ArbolNavidadComponent,
+    SucursalesComponent
   ],
   imports: [
     BrowserModule,
